@@ -5,6 +5,6 @@ import 'package:ttnflix/navigation/ttnflix_autoroute.gr.dart';
 class TtnFlixAppRouter extends $TtnFlixAppRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: HomeScreenRoute.page, initial: true),
+        AutoRoute(page: AppLoaderScreenRoute.page, initial: true),
       ];
 }
