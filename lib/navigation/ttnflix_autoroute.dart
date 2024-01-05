@@ -6,5 +6,6 @@ class TtnFlixAppRouter extends $TtnFlixAppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: AppLoaderScreenRoute.page, initial: true),
+        AutoRoute(page: HomeScreenRoute.page),
       ];
 }
