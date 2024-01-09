@@ -1,7 +1,7 @@
 class BaseResponse<T> {
   final String? message;
-  final int code;
-  final T body;
+  final int? code;
+  final T? body;
 
   const BaseResponse({
     required this.body,
@@ -12,8 +12,8 @@ class BaseResponse<T> {
   factory BaseResponse.fromJson(JSON? json) {
     return BaseResponse(
       body: json?['data'] as T,
-      message: json?['message'] as String?,
-      code: json?['code'] as int,
+      message: json?['status_message'] as String?,
+      code: json?['status_code'] as int,
     );
   }
 }

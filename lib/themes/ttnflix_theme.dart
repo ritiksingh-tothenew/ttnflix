@@ -22,8 +22,8 @@ class TtnFlixTheme {
     splashColor: Platform.isIOS ? Colors.transparent : null,
     appBarTheme: _appBarThemeData(Brightness.light),
     textTheme: TtnFlixTextStyles.defaultTextTheme.apply(
-        bodyColor: TTnFlixColors.informGreyColor.lightColor,
-        displayColor: TTnFlixColors.informGreyColor.lightColor),
+        bodyColor: TTnFlixColors.onPrimary.lightColor,
+        displayColor: TTnFlixColors.onPrimary.lightColor),
   );
 
   static ThemeData darkTheme = ThemeData(
