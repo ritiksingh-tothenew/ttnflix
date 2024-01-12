@@ -22,4 +22,8 @@ Movie _$MovieFromJson(Map<String, dynamic> json) => Movie(
       json['adult'] as bool?,
       json['original_language'] as String?,
       json['backdrop_path'] as String?,
+      json['poster_path'] as String?,
+      json['media_type'] as String?,
+      json['release_date'] as String?,
+      (json['vote_average'] as num?)?.toDouble(),
     );

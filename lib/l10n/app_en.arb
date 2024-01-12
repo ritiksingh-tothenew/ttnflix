@@ -1,3 +1,5 @@
 {
-  "app_name": "TTN Flix"
+  "app_name": "TTN Flix",
+  "overview": "Overview",
+  "detail": "Detail"
 }

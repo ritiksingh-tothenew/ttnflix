@@ -28,9 +28,25 @@ class Movie {
   final String? originalLanguage;
   @JsonKey(name: "backdrop_path")
   final String? backdropPath;
+  @JsonKey(name: "poster_path")
+  final String? posterPath;
+  @JsonKey(name: 'media_type')
+  final String? mediaType;
+  @JsonKey(name: 'release_date')
+  final String? releaseDate;
+  @JsonKey(name: 'vote_average')
+  final double? voteAverage;
 
-  const Movie(this.title, this.overview, this.adult, this.originalLanguage,
-      this.backdropPath);
+  const Movie(
+      this.title,
+      this.overview,
+      this.adult,
+      this.originalLanguage,
+      this.backdropPath,
+      this.posterPath,
+      this.mediaType,
+      this.releaseDate,
+      this.voteAverage);
 
   factory Movie.fromJson(Map<String, dynamic> data) => _$MovieFromJson(data);
 

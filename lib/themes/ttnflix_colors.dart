@@ -130,7 +130,7 @@ class TTnFlixColors {
       lightColor: _primaryOnPressedGreen, darkColor: _primaryOnPressedGreen);
 
   static final Map<Brightness, Color> primaryColor =
-      _buildColor(lightColor: _genuinePink, darkColor: _genuinePink);
+      _buildColor(lightColor: whiteGlow, darkColor: whiteGlow);
 
   static final Map<Brightness, Color> secondaryColor =
       _buildColor(lightColor: _blue, darkColor: _blue);
