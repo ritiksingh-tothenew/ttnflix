@@ -8,7 +8,7 @@ class AppLoaderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  context.router.push(HomeScreenRoute());
+  context.router.push(LoginScreenRoute());
     return Container();
   }
 }

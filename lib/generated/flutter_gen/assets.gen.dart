@@ -14,6 +14,17 @@ import 'package:flutter_svg/flutter_svg.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/app_logo.png
+  AssetGenImage get appLogo => const AssetGenImage('assets/icons/app_logo.png');
+
+  /// File path: assets/icons/app_logo_white.png
+  AssetGenImage get appLogoWhite =>
+      const AssetGenImage('assets/icons/app_logo_white.png');
+
+  /// File path: assets/icons/app_logo_with_white_background.png
+  AssetGenImage get appLogoWithWhiteBackground =>
+      const AssetGenImage('assets/icons/app_logo_with_white_background.png');
+
   /// File path: assets/icons/ic_error.png
   AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
 
@@ -21,7 +32,8 @@ class $AssetsIconsGen {
   SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
 
   /// List of all assets
-  List<dynamic> get values => [icError, profile];
+  List<dynamic> get values =>
+      [appLogo, appLogoWhite, appLogoWithWhiteBackground, icError, profile];
 }
 
 class Assets {

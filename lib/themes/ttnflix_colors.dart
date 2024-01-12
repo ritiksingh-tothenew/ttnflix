@@ -68,6 +68,8 @@ class TTnFlixColors {
   static const Color _drawerExpansionTileColor = Color(0xFF394094);
   static const Color _grey3Color = Color(0xFFd2d1d1);
   static const Color grey7Color = Color(0xFF605D5E);
+  static const Color blueDarkColor = Color(0xFF31009B);
+  static const Color blueLightColor = Color(0xFF4700E8);
 
   static const Color completeTransparentColor = Color(0x00000000);
   static const Color signInBannerBgColor = Color(0xFFeff0fd);
