@@ -36,6 +36,12 @@ class ApiService {
     Response response = await dio.get<JSON>(url,
         queryParameters: queryParameters, cancelToken: cancelToken);
 
+    if (response.statusCode == 200) {
+      return BaseResponse<T>(
+          body: response.data,
+          code: response.data["status_code"],
+          message: response.data["status_message"]);
+    }
     return BaseResponse<T>(
         body: response.data,
         code: response.statusCode ?? 500,

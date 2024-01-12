@@ -1,3 +1,4 @@
+import 'package:ttnflix/constant/app_constant.dart';
 import 'package:ttnflix/di/service_locator.dart';
 import 'package:ttnflix/home/model/movie_list.dart';
 import 'package:ttnflix/network/api_client.dart';
@@ -10,9 +11,11 @@ class HomeRepository {
     _apiService = TTNFlixSL.get<ApiClient>();
   }
 
-  Future<MovieListModel> getMoviesData() async {
+  Future<MovieListModel> getMoviesData(int pageNo) async {
     final response = await _apiService.getDataFromApi(
-        endpoint: ApiUrl.GET_MOVIES, converter: MovieListModel.fromJson);
+        endpoint: ApiUrl.GET_MOVIES,
+        converter: MovieListModel.fromJson,
+        queryParams: {"api_key": AppConstant.API_KEY, "page": pageNo});
     return response;
   }
 }

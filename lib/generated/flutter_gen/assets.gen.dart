@@ -14,11 +14,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/ic_error.png
+  AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
+
   /// File path: assets/icons/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [profile];
+  List<dynamic> get values => [icError, profile];
 }
 
 class Assets {

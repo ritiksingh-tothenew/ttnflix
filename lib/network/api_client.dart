@@ -30,6 +30,7 @@ class ApiClient implements ApiInterface {
       );
 
       body = data.body;
+      if (body == null) throw TTNFlixException(message: data.message ?? "");
     } on Exception catch (ex) {
       throw TTNFlixException.fromDioException(ex);
     }

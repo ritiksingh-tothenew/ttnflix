@@ -119,4 +119,6 @@ class TtnFlixSize {
   static const double size310 = 310;
   static const double size110 = 110;
   static const double size300 = 300;
+  static const double size320 = 320;
+  static const double size280 = 280;
 }

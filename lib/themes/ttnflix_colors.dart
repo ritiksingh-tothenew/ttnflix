@@ -139,7 +139,7 @@ class TTnFlixColors {
       _buildColor(lightColor: _genuinePink, darkColor: _genuinePink);
 
   static final Map<Brightness, Color> canvasColor =
-      _buildColor(lightColor: _pureWhite, darkColor: _pureWhite);
+      _buildColor(lightColor: _informGrey, darkColor: _informGrey);
 
   static final Map<Brightness, Color> backgroundColor =
       _buildColor(lightColor: _foundationGrey, darkColor: _foundationGreyDark);
