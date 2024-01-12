@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 import '../../navigation/ttnflix_autoroute.gr.dart';
+import 'package:flutter/material.dart';
+
 import '../../themes/ttnflix_sizes.dart';
 import '../model/movie_list.dart';
 
