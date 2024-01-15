@@ -28,12 +28,21 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_error.png
   AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
 
+  /// File path: assets/icons/ic_user.png
+  AssetGenImage get icUser => const AssetGenImage('assets/icons/ic_user.png');
+
   /// File path: assets/icons/profile.svg
   SvgGenImage get profile => const SvgGenImage('assets/icons/profile.svg');
 
   /// List of all assets
-  List<dynamic> get values =>
-      [appLogo, appLogoWhite, appLogoWithWhiteBackground, icError, profile];
+  List<dynamic> get values => [
+        appLogo,
+        appLogoWhite,
+        appLogoWithWhiteBackground,
+        icError,
+        icUser,
+        profile
+      ];
 }
 
 class Assets {

@@ -1,5 +1,27 @@
 {
   "app_name": "TTN Flix",
   "overview": "Overview",
-  "detail": "Detail"
+  "detail": "Detail",
+  "welcome_back": "Welcome Back",
+  "username": "Username",
+  "password": "Password",
+  "login": "Login",
+  "enter_credentials": "Enter your credentials to login",
+  "forgot_password": "Forgot password",
+  "dont_have_account": "Don't have an account?",
+  "signup": "Sign Up",
+  "welcome": "Welcome",
+  "create_account": "Create your Account",
+  "dob": "D.O.B",
+  "name": "Name",
+  "male": "Male",
+  "female": "Female",
+  "not_specified": "Not Specified",
+  "email": "Email",
+  "confirm_password": "Confirm Password",
+  "gender": "Gender",
+  "profile_pic": "upload your profile picture",
+  "camera": "Camera",
+  "gallery": "Gallery",
+  "already_have_account": "Already have an account"
 }
