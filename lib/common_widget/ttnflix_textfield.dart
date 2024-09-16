@@ -8,9 +8,9 @@ class TtnFlixTextField extends StatelessWidget {
       required this.textEditingController,
       this.hint,
       this.prefixIcon,
-      this.textColor,
-      this.error,
-      this.textInputType});
+    this.textColor,
+    this.error,
+    this.textInputType});
 
   final TextEditingController textEditingController;
   final String? hint;
@@ -23,18 +23,21 @@ class TtnFlixTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: TtnFlixSize.size16),
-      child: TextField(
-        keyboardType: textInputType,
-        controller: textEditingController,
-        style: Theme.of(context)
-            .textTheme
-            .titleMedium
-            ?.copyWith(color: textColor ?? TTnFlixColors.grey8),
-        decoration: InputDecoration(
-            hintText: hint ?? '',
-            fillColor: Colors.white,
-            filled: true,
-            prefixIcon: prefixIcon),
+      child: SizedBox(
+        width: 400.0,
+        child: TextFormField(
+          keyboardType: textInputType,
+          controller: textEditingController,
+          style: Theme.of(context)
+              .textTheme
+              .titleMedium
+              ?.copyWith(color: textColor ?? TTnFlixColors.grey8),
+          decoration: InputDecoration(
+              hintText: hint ?? '',
+              fillColor: Colors.white,
+              filled: true,
+              prefixIcon: prefixIcon),
+        ),
       ),
     );
   }

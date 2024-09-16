@@ -23,28 +23,31 @@ class TtnFlixDropdown extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: TtnFlixSize.size16),
-      child: DropdownButtonFormField<String>(
-        value: currentValue ?? '2',
-        decoration: const InputDecoration(
-          fillColor: Colors.white,
-          filled: true,
-          prefixIcon: Icon(Icons.male),
+      child: SizedBox(
+        width: 400,
+        child: DropdownButtonFormField<String>(
+          value: currentValue ?? '2',
+          decoration: const InputDecoration(
+            fillColor: Colors.white,
+            filled: true,
+            prefixIcon: Icon(Icons.male),
+          ),
+          hint: Text(
+            hintText ?? '',
+            style: Theme.of(context)
+                .textTheme
+                .titleMedium
+                ?.copyWith(color: textColor ?? TTnFlixColors.grey8),
+          ),
+          icon: const Icon(
+            Icons.keyboard_arrow_down,
+            // color: Colors.white,
+          ),
+          iconSize: TtnFlixSize.size24,
+          dropdownColor: Colors.white,
+          items: dropDownData,
+          onChanged: (value) {},
         ),
-        hint: Text(
-          hintText ?? '',
-          style: Theme.of(context)
-              .textTheme
-              .titleMedium
-              ?.copyWith(color: textColor ?? TTnFlixColors.grey8),
-        ),
-        icon: const Icon(
-          Icons.keyboard_arrow_down,
-          // color: Colors.white,
-        ),
-        iconSize: TtnFlixSize.size24,
-        dropdownColor: Colors.white,
-        items: dropDownData,
-        onChanged: (value) {},
       ),
     );
   }

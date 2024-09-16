@@ -89,7 +89,8 @@ class SignUpScreen extends StatelessWidget {
                 height: TtnFlixSize.size24,
               ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TtnFlixTextField(
                     textEditingController: _nameEditingController,
@@ -100,7 +101,7 @@ class SignUpScreen extends StatelessWidget {
                   TtnFlixTextField(
                     textEditingController: _emailEditingController,
                     prefixIcon: const Icon(Icons.email),
-                    hint: appLocalizations.name,
+                    hint: appLocalizations.email,
                     textInputType: TextInputType.emailAddress,
                   ),
                   TtnFlixDatePickerField(

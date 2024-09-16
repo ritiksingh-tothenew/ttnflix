@@ -40,28 +40,31 @@ class _TtnPasswordFieldState extends State<TtnPasswordField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: TtnFlixSize.size16),
-      child: TextField(
-        obscureText: _isPasswordVisible,
-        keyboardType: textInputType,
-        controller: textEditingController,
-        style: Theme.of(context)
-            .textTheme
-            .titleMedium
-            ?.copyWith(color: textColor ?? TTnFlixColors.grey8),
-        decoration: InputDecoration(
-            suffixIcon: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _isPasswordVisible = !_isPasswordVisible;
-                  });
-                },
-                child: Icon(!_isPasswordVisible
-                    ? Icons.visibility
-                    : Icons.visibility_off)),
-            hintText: hint ?? '',
-            fillColor: Colors.white,
-            filled: true,
-            prefixIcon: prefixIcon),
+      child: SizedBox(
+        width: 400,
+        child: TextField(
+          obscureText: _isPasswordVisible,
+          keyboardType: textInputType,
+          controller: textEditingController,
+          style: Theme.of(context)
+              .textTheme
+              .titleMedium
+              ?.copyWith(color: textColor ?? TTnFlixColors.grey8),
+          decoration: InputDecoration(
+              suffixIcon: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _isPasswordVisible = !_isPasswordVisible;
+                    });
+                  },
+                  child: Icon(!_isPasswordVisible
+                      ? Icons.visibility
+                      : Icons.visibility_off)),
+              hintText: hint ?? '',
+              fillColor: Colors.white,
+              filled: true,
+              prefixIcon: prefixIcon),
+        ),
       ),
     );
   }

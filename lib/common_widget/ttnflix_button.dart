@@ -14,6 +14,7 @@ class TtnFlixButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(TtnFlixSize.size10),
       child: Container(
+        width: 400,
         decoration: BoxDecoration(
           boxShadow: const [
             BoxShadow(

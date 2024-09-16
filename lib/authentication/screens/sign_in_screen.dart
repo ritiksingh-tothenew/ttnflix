@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:ttnflix/common_widget/ttnflix_button.dart';
@@ -15,7 +16,7 @@ class SignInScreen extends StatelessWidget {
 
   final TextEditingController _emailEditingController = TextEditingController();
   final TextEditingController _passwordEditingController =
-      TextEditingController();
+  TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +26,8 @@ class SignInScreen extends StatelessWidget {
         margin: const EdgeInsets.all(TtnFlixSize.size24),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment:
+              kIsWeb ? CrossAxisAlignment.center : CrossAxisAlignment.stretch,
           children: [
             Column(
               children: [
@@ -43,12 +46,14 @@ class SignInScreen extends StatelessWidget {
               ],
             ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: kIsWeb
+                  ? CrossAxisAlignment.center
+                  : CrossAxisAlignment.stretch,
               children: [
                 TtnFlixTextField(
                   textEditingController: _emailEditingController,
                   prefixIcon: const Icon(Icons.email),
-                  hint: appLocalizations.name,
+                  hint: appLocalizations.email,
                   textInputType: TextInputType.emailAddress,
                 ),
                 TtnPasswordField(
@@ -58,17 +63,26 @@ class SignInScreen extends StatelessWidget {
                   textInputType: TextInputType.visiblePassword,
                 ),
                 TtnFlixButton(
-                    onClick: () {}, buttonText: appLocalizations.login)
+                    onClick: () {
+                      if (_emailEditingController.text.isNotEmpty &&
+                          _passwordEditingController.text.isNotEmpty) {
+                        context.router.push(HomeScreenRoute());
+                      }
+                    },
+                    buttonText: appLocalizations.login)
               ],
             ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                appLocalizations.forgot_password,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium
-                    ?.copyWith(color: TTnFlixColors.blueLightColor),
+            SizedBox(
+              width: 400,
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  appLocalizations.forgot_password,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyMedium
+                      ?.copyWith(color: TTnFlixColors.blueLightColor),
+                ),
               ),
             ),
             Row(

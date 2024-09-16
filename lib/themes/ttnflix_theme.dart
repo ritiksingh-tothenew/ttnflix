@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ttnflix/themes/ttnflix_colors.dart';
@@ -19,7 +17,7 @@ class TtnFlixTheme {
     dividerTheme: _getDividerThemeData(Brightness.light),
     inputDecorationTheme: _getInputDecorationTheme(Brightness.light),
     fontFamily: 'Inter',
-    splashColor: Platform.isIOS ? Colors.transparent : null,
+   // splashColor: Platform.isIOS ? Colors.transparent : null,
     appBarTheme: _appBarThemeData(Brightness.light),
     textTheme: TtnFlixTextStyles.defaultTextTheme.apply(
         bodyColor: TTnFlixColors.onPrimary.lightColor,

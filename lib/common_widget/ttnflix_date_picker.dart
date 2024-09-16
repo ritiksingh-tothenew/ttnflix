@@ -20,6 +20,7 @@ class TtnFlixDatePickerField extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(TtnFlixSize.size16),
           height: TtnFlixSize.size50,
+          width: 400,
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(TtnFlixSize.size16)),
